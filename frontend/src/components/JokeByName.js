@@ -27,6 +27,7 @@ const JokeByName = () => {
         type="text"
         placeholder="Enter a name"
         value={selectedName}
+        className="styled-input"
         onChange={(e) => setSelectedName(e.target.value)}
       />
       <button onClick={fetchJoke}>Get Joke</button>

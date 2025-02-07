@@ -27,6 +27,7 @@ const JokeByQuery = () => {
         type="text"
         placeholder="Enter a query"
         value={query}
+        className="styled-input"
         onChange={(e) => setQuery(e.target.value)}
       />
       <button onClick={fetchJoke}>Get Joke</button>
