@@ -10,7 +10,7 @@ const JokeByQuery = () => {
     if (!query) return;
     try {
       const response = await axios.get(
-        `https://api.chucknorris.io/jokes/search?query=${query}`
+        `http://localhost:5000/api/search/${query}`
       );
       setJoke(response.data.result[0].value);
     } catch (err) {

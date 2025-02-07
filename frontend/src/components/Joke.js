@@ -6,7 +6,7 @@ const RandomJoke = () => {
 
     const fetchJoke = async () => {
         try {
-            const response = await axios.get("https://api.chucknorris.io/jokes/random");
+            const response = await axios.get("http://localhost:5000/api/joke");
             setJoke(response.data.value);
         } catch (error) {
             console.error("Error fetching joke", error);

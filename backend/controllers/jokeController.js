@@ -63,9 +63,24 @@ const getCategories = async (req, res) => {
   }
 };
 
+// Obtener chiste por nombre
+const getJokeByName = async (req, res) => {
+  try {
+    const { name } = req.params;
+    const response = await fetch(
+      `https://api.chucknorris.io/jokes/random?name=${name}`
+    );
+    const data = await response.json();
+    res.status(200).json({ joke: data.value });
+  } catch (error) {
+    res.status(400).json({ error: "Error fetching joke" });
+  }
+};
+
 module.exports = {
   getRandomJoke,
   getCategoryJoke,
   getQueryJoke,
-  getCategories
+  getCategories,
+  getJokeByName
 };

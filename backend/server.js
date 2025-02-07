@@ -48,10 +48,20 @@ app.get("/api/search/:query", async (req, res) => {
     }
 });
 
-// GET joke by query and category
-app.get("/api/search/:query/:category", async (req, res) => {
+// Get joke by category and name
+app.get("/api/:category&name=:name", async (req, res) => {
     try {
-        const response = await axios.get(`https://api.chucknorris.io/jokes/search?query=${req.params.query}&category=${req.params.category}`);
+        const response = await axios.get(`https://api.chucknorris.io/jokes/random?category=${req.params.category}&name=${req.params.name}`);
+        res.json(response.data);
+    } catch (error) {
+        res.status(500).json({ error: "Error fetching joke" });
+    }
+});
+
+// GET joke by name
+app.get("/api/joke/name/:name", async (req, res) => {
+    try {
+        const response = await axios.get(`https://api.chucknorris.io/jokes/random?name=${req.params.name}`);
         res.json(response.data);
     } catch (error) {
         res.status(500).json({ error: "Error fetching joke" });

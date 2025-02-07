@@ -11,7 +11,7 @@ const JokeCategoriesAndName = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "https://api.chucknorris.io/jokes/categories"
+        "http://localhost:5000/api/categories"
       );
       console.log("API response:", response.data);
       setCategories(response.data);
@@ -25,7 +25,7 @@ const JokeCategoriesAndName = () => {
     if (!selectedCategory || !selectedName) return;
     try {
       const response = await axios.get(
-        `https://api.chucknorris.io/jokes/random?category=${selectedCategory}&name=${selectedName}`
+        `http://localhost:5000/api/${selectedCategory}&name=${selectedName}`
       );
       setJoke(response.data.value);
     } catch (err) {

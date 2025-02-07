@@ -8,7 +8,7 @@ const JokeCatagories = () => {
   const fetchCategories = async () => {
     try {
       const response = await axios.get(
-        "https://api.chucknorris.io/jokes/categories"
+        "http://localhost:5000/api/categories"
       );
       console.log("API response:", response.data);
       setCategories(response.data);

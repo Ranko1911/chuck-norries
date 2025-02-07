@@ -10,7 +10,7 @@ const JokeByName = () => {
     if (!selectedName) return;
     try {
       const response = await axios.get(
-        `https://api.chucknorris.io/jokes/random?name=${selectedName}`
+        `http://localhost:5000/api/joke/name/${selectedName}`
       );
       setJoke(response.data.value);
     } catch (err) {
