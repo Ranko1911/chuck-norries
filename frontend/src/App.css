@@ -1,22 +1,40 @@
-/* Centrar el contenido en la pantalla */
+/* Fondo con imagen aleatoria de Chuck Norris */
 .app-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f3f3f3;
+  background: url("https://source.unsplash.com/1600x900/?chuck-norris") no-repeat center center/cover;
   margin: 0;
+  transition: background-color 0.3s ease;
 }
 
-/* Estilizar el contenedor principal */
+/* Contenedor de chistes */
 .content {
-  background: white;
+  background: rgba(255, 255, 255, 0.85); /* Fondo claro semitransparente */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   text-align: center;
   width: 90%;
   max-width: 600px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Botón de cambio de tema */
+.toggle-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.toggle-btn:hover {
+  background-color: #555;
 }
 
 /* Estilizar el título */
@@ -24,4 +42,27 @@ h1 {
   font-size: 24px;
   margin-bottom: 15px;
   color: #333;
+}
+
+/* 🌙 MODO OSCURO */
+.dark-mode {
+  background: url("https://source.unsplash.com/1600x900/?chuck-norris,dark") no-repeat center center/cover;
+}
+
+.dark-mode .content {
+  background: rgba(0, 0, 0, 0.85); /* Fondo oscuro semitransparente */
+  color: white;
+}
+
+.dark-mode h1 {
+  color: white;
+}
+
+.dark-mode .toggle-btn {
+  background-color: white;
+  color: black;
+}
+
+.dark-mode .toggle-btn:hover {
+  background-color: lightgray;
 }
