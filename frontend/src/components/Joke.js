@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 
-const Joke = () => {
+const RandomJoke = () => {
     const [joke, setJoke] = useState("");
 
     const fetchJoke = async () => {
         try {
-            const response = await axios.get("http://localhost:5000/api/joke");
+            const response = await axios.get("https://api.chucknorris.io/jokes/random");
             setJoke(response.data.value);
         } catch (error) {
             console.error("Error fetching joke", error);
@@ -26,4 +26,4 @@ const Joke = () => {
     );
 };
 
-export default Joke;
+export default RandomJoke;
