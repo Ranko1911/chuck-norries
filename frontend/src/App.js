@@ -3,18 +3,20 @@ import Joke from "./components/Joke";
 import JokeByCategory from "./components/JokeByCategory";
 import JokeByName from "./components/JokeByName";
 import JokeByQuery from "./components/JokeByQuery";
-import JokeCatagories from "./components/JokeCatagories";
 import JokeCategoriesAndName from "./components/JokeByNameAndCategory";
+import "./App.css"; // Importamos los estilos
 
-function App() { // esto es basicamente html pero no es html, es jsx
+function App() {
     return (
-        <div>
-            <Joke />  
-            <JokeByCategory />
-            <JokeByName />
-            <JokeByQuery />
-            {/* <JokeCatagories /> */}
-            <JokeCategoriesAndName />
+        <div className="app-container">
+            <div className="content">
+                <h1>Chuck Norris Jokes</h1>
+                <Joke />
+                <JokeByCategory />
+                <JokeByName />
+                <JokeByQuery />
+                <JokeCategoriesAndName />
+            </div>
         </div>
     );
 }
