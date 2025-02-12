@@ -7,12 +7,14 @@ Clone the repository and run the script using the following command:
 Terminal 1:
 ```bash
 cd backend
+npm install
 node server.js
 ```
 
 Terminal 2:
 ```bash
 cd frontend
+npm install
 npm run dev
 ```
 
