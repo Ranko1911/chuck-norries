@@ -16,6 +16,7 @@ function App() {
         backgroundImage: "url('/chuck-norris.jpg')", 
         backgroundRepeat: "repeat", 
         backgroundSize: "25% 25%",
+        backgroundPosition: "center center",
     }}
     >
       {" "}

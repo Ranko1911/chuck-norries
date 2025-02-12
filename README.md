@@ -19,3 +19,7 @@ npm run dev
 ```
 
 Wait and see the magic happen!
+
+You should see this:
+
+![Screenshot](/frontend/public/cap1.png)
